@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="create-subreddit-container">
+        <form class="post-form" [formGroup]="createSubredditForm" (ngSubmit)="createSubreddit()">
+          <div class="form-group">
+            <div class="create-subreddit-heading">Utworz tag</div>
+            <hr />
+            <input type="text" [formControlName]="'title'" class="form-control" style="margin-top: 5px"
+              placeholder="Tytuł">
+            <textarea type="text" [formControlName]="'description'" style="width: 100%; margin-top: 5px"
+              placeholder="Opis"></textarea>
+            <div>
+              <div style="margin-top: 5px" class="float-right">
+                <button (click)="discard()" class="btnDiscard">Usuń</button>
+                <button class="btnCreateSubreddit">Utwórz</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <div class="sidebar">
+          <h5 class="guidelines">Zasady tworzenia posta</h5>
+          <hr />
+          <ul>
+
+            <hr />
+            <li>Zachowuj sie jak w normalnym życiu!</li>
+            <hr />
+            <li>Nie spamuj!</li>
+            <hr />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+   Witaj <b>{{name}}</b>.<br /> Dodałeś <b>{{postLength}}</b> posty i skometowałeś
+    <b>{{commentLength}}</b> razy.
+    Możesz sprawdzić historię swojej aktywności poniżej.
+  </div>
+  <hr />
+  <div>
+    Twoje posty:
+  </div>
+  <app-post-tile [posts]="posts"></app-post-tile>
+  <hr />
+  <div>
+    Twoje komentarze:
+  </div>
+  <div *ngFor="let comment of comments">
+    <div class="comment">
+      <div class="username">
+        <a routerLink="/user/comment.username">{{comment.userName}}</a>
+      </div>
+      <div>
+        <p>{{comment.duration}}</p>
+      </div>
+      <b>{{comment.text}}</b>
+    </div>
+    <hr />
+  </div>
+</div>
